@@ -23,12 +23,13 @@ function numberOfCharacters(string) {
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
   var obj={}
-  for(x = 0, length = string.length; x < length; x++) {
-    var l = string.charAt(x)
-    obj[l] = (isNaN(obj[l]) ? 1 : obj[l] + 1);
+  for(let i = 0; i < string.length; i++){
+    if(!obj[string[i]]){
+      obj[string[i]] = 0;
+    }  
+    obj[string[i]] += 1;
   }
   return obj;
-
 }
 
 
