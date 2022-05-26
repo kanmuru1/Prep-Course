@@ -10,16 +10,10 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-  var y = [];
   var x = Object.keys(objeto).map(function (key){
       return [String([key]), objeto[key] ];
   })
-  for (var i=0;i<x.length;i++){
-      for (var z=0;z<x[i].length;z++){
-          y[i]= x[i], x[z]
-      }
-  }
-  return y;
+  return x;
 }
 
 
